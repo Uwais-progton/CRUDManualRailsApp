@@ -1,0 +1,24 @@
+<div style="text-align:center;">
+<h1>Student Details</h1>
+<p><%= image_tag(@student.image, class: "image")if @student.image.present?%></p>
+<p><strong>First Name: </strong><%= @student.first_name%></p>
+<p><strong>Last Name: </strong><%= @student.last_name%></p>
+<p><strong>E-mail: </strong><%= @student.email%></p>
+<br>
+<button><%= link_to 'Back', students_path%></button> |
+<button><%=link_to 'Edit',edit_student_path(@student)%></button> 
+<!--<button><%= link_to 'Destroy', students_path(@student), data: {
+    turbo_method: :destroy,
+    turbo_confirm: "Are you sure?"
+    } %>
+</button>-->
+
+<!--<button><%= link_to 'Destroy', students_path, method: 'delete'%></button>-->
+<!--<button><%= link_to 'Delete', student_path(@student), method: :delete, data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+    }%></button>-->
+
+
+
+</div>

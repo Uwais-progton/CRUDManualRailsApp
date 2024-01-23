@@ -1,0 +1,30 @@
+<h1> Fill the student form </h1>
+<%= form_with model: @student do |f| %>
+<% if @student.errors.any? %>
+    <ul>
+        <% @student.errors.full_messages.each do |msg| %>
+            <li><%= msg%><li>
+        <% end %>
+    </ul>
+<% end %>
+ 
+
+  
+    <div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+    </div>
+    <div>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    </div>
+    <div>
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+    </div>
+
+    <div>
+        <%= f.submit :submit %>
+    </div>
+
+<% end %>
